@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        node(label: 'thebrain')
+    }
     stages {
         stage('Stage 1') {
             steps {
