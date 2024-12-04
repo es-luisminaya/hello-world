@@ -3,9 +3,18 @@ pipeline {
         node(label: 'thebrain')
     }
     stages {
-        stage('Stage 1') {
+        stage('build image') {
             steps {
-                echo 'Hello world!'
+                sh """
+                docker build -t hello-world-image .
+                """
+            }
+        }
+        stage('run image') {
+            steps {
+                sh """
+                docker run --rm hello-world-image
+                """
             }
         }
     }
