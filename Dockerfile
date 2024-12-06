@@ -6,4 +6,4 @@ COPY . .
 RUN apt update && apt install cowsay -y 
 RUN chmod +x cowsay.sh
 
-CMD [ "./cowsay.sh" ]
+CMD [ "sh", "cowsay.sh" ]
