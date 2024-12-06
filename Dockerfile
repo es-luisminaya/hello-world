@@ -1,9 +1,9 @@
-FROM debian:11-slim
+FROM ubuntu:focal-20191030
 
 WORKDIR /app
 
 COPY . .
-RUN apt update && apt install cowsay -y 
+RUN apt-get update && apt-get install cowsay -y
 RUN chmod +x cowsay.sh
 
 CMD [ "sh", "cowsay.sh" ]

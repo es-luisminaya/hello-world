@@ -1,3 +1,6 @@
-#! /bin/bash
+#! /bin/sh
 
-cowsay "we tripping 4 real"
+echo "$PWD"
+which cowsay
+echo "NO SE PORQUE NO ESTA FUNCIONANDO NO"
+echo "we tripping 4 real"
